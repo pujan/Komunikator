@@ -10,8 +10,11 @@ parts
 bin
 var
 sdist
+logs
 develop-eggs
 .installed.cfg
+
+*.ini
 
 # Installer logs
 pip-log.txt
