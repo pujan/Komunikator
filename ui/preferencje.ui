@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preferencje</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QTabWidget" name="twOpcje">
+   <property name="geometry">
+    <rect>
+     <x>6</x>
+     <y>12</y>
+     <width>351</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tabOgolne">
+    <attribute name="title">
+     <string>Ogólne</string>
+    </attribute>
+    <widget class="QLineEdit" name="leNick">
+     <property name="geometry">
+      <rect>
+       <x>151</x>
+       <y>13</y>
+       <width>161</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbNick">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>16</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa użytkownika:</string>
+     </property>
+     <property name="buddy">
+      <cstring>leNick</cstring>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbStatus">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>55</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Początkowy status:</string>
+     </property>
+     <property name="buddy">
+      <cstring>cbStatus</cstring>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chbEnterSend">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>82</y>
+       <width>321</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wysyła wiadomość za pomocą klawisza ENTER</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbStatus">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>52</y>
+       <width>161</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Dostępny</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Zaraz wracam</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Zajęty</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Niedostępny</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabHistoria">
+    <attribute name="title">
+     <string>Historia</string>
+    </attribute>
+    <widget class="QCheckBox" name="chbZapiszRozmowe">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>221</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zapisz rozmowę do dziennika</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chbZapiszPowiadomienia">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>44</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zapisz komunikaty programu</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbKatalogHistorii">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>89</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Katalog historii:</string>
+     </property>
+     <property name="buddy">
+      <cstring>leKatalogHistorii</cstring>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbNazwaPliku">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nazwa pliku:</string>
+     </property>
+     <property name="buddy">
+      <cstring>leNazwaPliku</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leNazwaPliku">
+     <property name="geometry">
+      <rect>
+       <x>119</x>
+       <y>128</y>
+       <width>221</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leKatalogHistorii">
+     <property name="geometry">
+      <rect>
+       <x>117</x>
+       <y>86</y>
+       <width>201</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbKatalogHistorii">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>83</y>
+       <width>21</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="gbZmienne">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>150</y>
+       <width>331</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Zmienne używane w nazwie pliku</string>
+     </property>
+     <widget class="QLabel" name="lbZmienne">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>311</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%d - Dzień miesiąca&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%D - Tekstowy opis angielskiej nazwy dnia&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%m - Liczbowa forma miesiąca&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%M - Krótki, angielski opis miesiąca&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%A - Pora dnia - AM lub PM&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%h - Godzina, w formacie 12-godzinnym&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%H - Godzina, w formacie 24-godzinnym&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;%i - Minuty&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabDzwiek">
+    <attribute name="title">
+     <string>Dźwięk</string>
+    </attribute>
+    <widget class="QCheckBox" name="chbGlosnik">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Włącz powiadamianie głośnikiem systemowym</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chbDzwiek">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Włącz powiadamianie dźwiękami</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leDzwiekDolaczenia">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>249</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leDzwiekPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>251</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbDzwiekPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dźwięk wiadomości przychodzącej:</string>
+     </property>
+     <property name="buddy">
+      <cstring>leDzwiekPrzychodzacej</cstring>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbDzwiekDolaczenia">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dźwięk dodłączenia użytkownika:</string>
+     </property>
+     <property name="buddy">
+      <cstring>leDzwiekDolaczenia</cstring>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbDzwiekDolaczenia">
+     <property name="geometry">
+      <rect>
+       <x>264</x>
+       <y>147</y>
+       <width>20</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbDzwiekPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>88</y>
+       <width>21</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabKolory">
+    <attribute name="title">
+     <string>Kolory</string>
+    </attribute>
+    <widget class="QFrame" name="frmKolorPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>193</x>
+       <y>10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frmKolorWyslanej">
+     <property name="geometry">
+      <rect>
+       <x>193</x>
+       <y>60</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frmKolorKomunikatu">
+     <property name="geometry">
+      <rect>
+       <x>193</x>
+       <y>110</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbKolorPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>22</y>
+       <width>181</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wiadomość przychodząca:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbKolorWyslanej">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>71</y>
+       <width>171</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wiadomość wysłana:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbKolorKomunikatu">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>124</y>
+       <width>171</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Komunikaty programu:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbKolorPrzychodzacej">
+     <property name="geometry">
+      <rect>
+       <x>252</x>
+       <y>17</y>
+       <width>84</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zmień</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbKolorWyslanej">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>65</y>
+       <width>84</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zmień</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbKolorKomunikatu">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>117</y>
+       <width>84</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zmień</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pbAnuluj">
+   <property name="geometry">
+    <rect>
+     <x>276</x>
+     <y>332</y>
+     <width>80</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Anuluj</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbOK">
+   <property name="geometry">
+    <rect>
+     <x>176</x>
+     <y>332</y>
+     <width>80</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>slZapisz()</slot>
+ </slots>
+</ui>
