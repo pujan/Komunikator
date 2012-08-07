@@ -11,6 +11,7 @@ bin
 var
 sdist
 logs
+.svn
 develop-eggs
 .installed.cfg
 
