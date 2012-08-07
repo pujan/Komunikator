@@ -1,5 +1,4 @@
 Komunikator
 ===========
 
-Instant messenger for LAN
-Polish language only!
+Instant messenger for LAN; Polish language only!
